@@ -1,0 +1,121 @@
+body{
+  background-color: white;
+}
+
+.logo{
+  color: white;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.menu-lateral{
+  border-radius: 3px;
+  height: 100%;
+}
+
+.menu-lateral li{
+  display: list-item !important;
+}
+
+.btn-contact{
+  background-color: transparent;
+}
+
+.btn-contact:hover, .btn-contact:focus{
+  background-color: #c62241;
+}
+
+.site-footer{
+  color:white;
+  background-color: #c62241;
+  padding: 23px 0px 23px;
+}
+
+.cont-logo{
+  height: 72px;
+  padding: 15px 50px !important;
+}
+
+.cont-user{
+  padding: 9px 0px !important;
+}
+
+#header{
+  background-color: #c62241;
+}
+
+.cont-mes{
+  height: 72px;
+  padding: 12px 0px !important;
+  border-left: 1px solid white;
+  padding-left: 20px !important;
+}
+
+
+.container{
+  width: 100%;
+}
+
+.row{
+  margin: 0px !important;
+}
+
+.cont-datos{
+  border-left: 1px solid #c62241;
+  padding: 0px !important;
+}
+
+.cont-datos h4{
+  color:#c62241;
+  padding: 0 0.75rem;
+}
+
+.cont-header{
+  padding: 0px !important;
+  color:white;
+}
+
+.cont-user a{
+  background-color: #ed1651;
+  color: white;
+}
+
+.dropdown-content li>a, .dropdown-content li>span{
+  color:white;
+}
+
+.cont-menu{
+  padding: 0px !important;
+}
+
+.menu-lateral li{
+  border-bottom: 1px solid #f6b2b5;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active{
+  font-weight: 600;
+}
+
+.cont-variables{
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 10px 11.5px !important;
+}
+
+.cont-datos .row{
+  border:1px solid whitesmoke;
+}
+
+.cont-redes h5{
+  font-size: 1.2rem !important;
+}
+
+.cont-variables p{
+  color: #ed1651;
+  font-size: 23px;
+  margin: 0px;
+}
+
+.menu-lateral .indicator{
+  display: none;
+}

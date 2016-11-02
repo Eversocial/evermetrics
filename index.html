@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Evermetrics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="apple-touch-icon", sizes="57x57", href="./assets/img/apple-icon-57x57.png">
+    <link rel="apple-touch-icon", sizes="60x60", href="./assets/img/apple-icon-60x60.png"/>
+    <link rel="apple-touch-icon", sizes="72x72", href="./assets/img/apple-icon-72x72.png"/>
+    <link rel="apple-touch-icon", sizes="76x76", href="./assets/img/apple-icon-76x76.png"/>
+    <link rel="apple-touch-icon", sizes="114x114", href="./assets/img/apple-icon-114x114.png"/>
+    <link rel="apple-touch-icon", sizes="120x120", href="./assets/img/apple-icon-120x120.png"/>
+    <link rel="apple-touch-icon", sizes="144x144", href="./assets/img/apple-icon-144x144.png"/>
+    <link rel="apple-touch-icon", sizes="152x152", href="./assets/img/apple-icon-152x152.png"/>
+    <link rel="apple-touch-icon", sizes="180x180", href="./assets/img/apple-icon-180x180.png"/>
+    <link rel="icon", type="image/png", sizes="192x192", href="./assets/img/android-icon-192x192.png"/>
+    <link rel="icon", type="image/png", sizes="32x32", href="./assets/img/favicon-32x32.png"/>
+    <link rel="icon", type="image/png", sizes="96x96", href="./assets/img/favicon-96x96.png"/>
+    <link rel="icon", type="image/png", sizes="16x16", href="./assets/img/favicon-16x16.png"/>
+    <script src="./assets/js/Chart.js"></script>
+
+  </head>
+  <body>
+    <section id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col m3 cont-logo">
+            <a class="logo" href="#">Evermetrics</a>
+          </div>
+          <div class="col m9 cont-header">
+            <div class="col m6 cont-mes">
+              <h5>Datos - Octubre</h5>
+            </div>
+            <div class="col m3 push-m3 cont-user">
+              <a href="#" data-activates="drop-users" class="btn btn-large btn-flat dropdown-button "><i aria-hidden="true" class="fa fa-user"></i></a>
+              <ul id="drop-users" class="dropdown-content">
+                   <li><a href="#">Salir</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section id="main-container">
+      <div class="container">
+        <div class="row">
+          <div class="col m3 cont-menu">
+              <ul class="tabs menu-lateral">
+                <li class="tab"><a class="active" href="#fb">Facebook</a></li>
+                <li class="tab"><a href="#tw">Twitter</a></li>
+                <li class="tab"><a href="#ins">Instagram</a></li>
+              </ul>
+          </div>
+          <div class="cont-redes">
+              <div id="fb" class="col m9 cont-datos">
+                <h4>Crecimiento</h4>
+                    <div class="row">
+                      <div class="col m4 cont-variables">
+                        <h5>Fans Totales</h5>
+                        <p id="count-number" class="timer count-title" data-to="315" data-speed="1500"></p>
+                      </div>
+                      <div class="col m4 cont-variables">
+                        <h5>Fans Nuevos</h5>
+                        <p id="count-number" class="timer count-title" data-to="63" data-speed="1500"></p>
+                      </div>
+                      <div class="col m4 cont-variables">
+                        <h5>No me Gusta</h5>
+                        <p id="count-number" class="timer count-title" data-to="1" data-speed="1500"></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col m6 cont-variables">
+                        <h5>Impresión</h5>
+                        <p id="count-number" class="timer count-title" data-to="8801" data-speed="1500"></p>
+                      </div>
+                      <div class="col m6 cont-variables">
+                        <h5>Usuarios Activos</h5>
+                        <p id="count-number" class="timer count-title" data-to="211" data-speed="1500"></p>
+                      </div>
+                    </div>
+                <h4>Demográficos</h4>
+                    <div class="row">
+                      <div class="col m3 cont-variables">
+                        <h5><i class="fa fa-venus" aria-hidden="true"></i> Mujeres</h5>
+                        <p><i class="fa fa-square" ></i> 53%</p>
+                        <h5><i class="fa fa-mars" aria-hidden="true"></i> Hombres</h5>
+                        <p style="color: #c62241;"><i class="fa fa-square" ></i> 45% </p>
+                      </div>
+                      <div class="col m9 cont-variables">
+                        <canvas id="genero" width="150" height="150"></canvas>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col m6 cont-variables">
+                        <div class="col m7" style="padding:0px;">
+                          <h5>Edades Principales</h5>
+                          <p><i class="fa fa-square" ></i> 25 - 34 Años: 41,90%<br><span style="color: #c62241;"><i class="fa fa-square" ></i> 18 - 24 Años: 32,38%</span><br><span style="color: #ee6e73;"><i class="fa fa-square" ></i> 13 - 17 Años: 9,20%</span></p>
+                        </div>
+                        <div class="col m5">
+                            <canvas id="edad" width="150" height="150"></canvas>
+                        </div>
+                      </div>
+                      <div class="col m6 cont-variables">
+                        <div class="col m7" style="padding:0px;">
+                          <h5>Principales idiomas</h5>
+                          <p><i class="fa fa-square" ></i> Español: 82,53%<br><span style="color: #c62241;"><i class="fa fa-square" ></i> Inglés: 16,19%</span></p>
+                        </div>
+                        <div class="col m5">
+                            <canvas id="idioma" width="150" height="150"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col m6 cont-variables">
+                        <div class="col m7" style="padding:0px;">
+                          <h5>Principales Países</h5>
+                          <p><i class="fa fa-square" ></i> Colombia: 92,38%<br><span style="color: #c62241;"><i class="fa fa-square" ></i> EEUU: 1,58%</span></p>
+                        </div>
+                        <div class="col m5">
+                          <canvas id="pais" width="150" height="150"></canvas>
+                        </div>
+                      </div>
+                      <div class="col m6 cont-variables">
+                        <div class="col m7" style="padding:0px;">
+                          <h5>Principales Ciudades</h5>
+                          <p><i class="fa fa-square" ></i> Medellín: 63,80%<br><span style="color: #c62241;"><i class="fa fa-square" ></i> Bogotá: 7,93%</span><br><span style="color: #ee6e73;"><i class="fa fa-square" ></i> Pasto: 1,58%</span></p>
+                        </div>
+                        <div class="col m5">
+                          <canvas id="ciudades" width="150" height="150"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                <h4>Interacción</h4>
+                        <div class="row">
+                          <div class="col m6 cont-variables">
+                            <h5>Referencias Externas</h5>
+                            <p id="count-number" class="timer count-title" data-to="11" data-speed="1500"></p>
+                          </div>
+                          <div class="col m6 cont-variables">
+                            <h5>Vistas Pestañas</h5>
+                            <p id="count-number" class="timer count-title" data-to="155" data-speed="1500"></p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col m6 cont-variables">
+                            <h5>Principales Pestañas</h5>
+                            <p>Aplicación personalizada: 3<br>Timeline: 139<br>Fotos: 6<br>Info: 4<br>Profile: 3</p>
+                          </div>
+                          <div class="col m6 cont-variables">
+                            <h5>Principales Referencias</h5>
+                            <p>Eversocial.co: 4<br>Google Mundo: 2<br>Otras búsquedas: 5</p>
+                          </div>
+                        </div>
+                    <h4>Contenido</h4>
+                        <div class="row">
+                          <div class="col m6 cont-variables">
+                            <h5>Post más efectivo</h5>
+                            <img src="./assets/img/post-efectivo.png" style="width:100%;" />
+                          </div>
+                          <div class="col m6 cont-variables">
+                            <h5>Datos del post</h5>
+                            <p>Fecha | Miércoles 4 de diciembre<br>Likes | 9<br>Comentarios | 0<br>Compartido | 0<br>Alcance | 150<br>Interacción | 9</p>
+                          </div>
+                        </div>
+              </div>
+              <div id="tw" class="col m9 cont-datos">
+                <h4>Crecimiento</h4>
+                    <div class="row">
+                      <div class="col m6 cont-variables">
+                        <h5>Total seguidores</h5>
+                        <p id="count-number" class="timer count-title" data-to="4015" data-speed="1500"></p>
+                      </div>
+                      <div class="col m6 cont-variables">
+                        <h5>Total seguidos</h5>
+                        <p id="count-number" class="timer count-title" data-to="2919" data-speed="1500"></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col m6 cont-variables">
+                        <h5>Nuevos Seguidores</h5>
+                        <p id="count-number" class="timer count-title" data-to="72" data-speed="1500"></p>
+                      </div>
+                      <div class="col m6 cont-variables">
+                        <h5>Fotos / Videos Globales</h5>
+                        <p id="count-number" class="timer count-title" data-to="218" data-speed="1500"></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col m12 cont-variables">
+                        <h5>Favoritos Globales</h5>
+                        <p id="count-number" class="timer count-title" data-to="432" data-speed="1500"></p>
+                      </div>
+                    </div>
+                <h4>Interacción</h4>
+                        <div class="row">
+                            <div class="col m4 cont-variables">
+                              <h5>Total Tweets</h5>
+                              <p id="count-number" class="timer count-title" data-to="7419" data-speed="1500"></p>
+                            </div>
+                            <div class="col m4 cont-variables">
+                              <h5>Tweets</h5>
+                              <p id="count-number" class="timer count-title" data-to="392" data-speed="1500"></p>
+
+                            </div>
+                            <div class="col m4 cont-variables">
+                              <h5>Retweets</h5>
+                              <p>98</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col m4 cont-variables">
+                              <h5>Menciones</h5>
+                              <p>136</p>
+                            </div>
+                            <div class="col m4 cont-variables">
+                              <h5>Favoritos</h5>
+                              <p>158</p>
+                            </div>
+                            <div class="col m4 cont-variables">
+                              <h5>Mensajes Directos</h5>
+                              <p>0</p>
+                            </div>
+                        </div>
+                 <h4>Otros datos</h4>
+                   <div class="row">
+                       <div class="col m3 cont-variables">
+                         <h5>#werunmedellín</h5>
+                         <p>14</p>
+                       </div>
+                       <div class="col m3 cont-variables">
+                         <h5>#maratónflores</h5>
+                         <p>158</p>
+                       </div>
+                       <div class="col m3 cont-variables">
+                         <h5>#maratónmedellín</h5>
+                         <p>165</p>
+                       </div>
+                       <div class="col m3 cont-variables">
+                         <h5>#yoelegícorrer</h5>
+                         <p>22</p>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="col m3 cont-variables">
+                         <h5>#runner</h5>
+                         <p>53</p>
+                       </div>
+                       <div class="col m3 cont-variables">
+                         <h5>#running</h5>
+                         <p>18</p>
+                       </div>
+                       <div class="col m3 cont-variables">
+                         <h5>#repost</h5>
+                         <p>34</p>
+                       </div>
+                       <div class="col m3 cont-variables">
+                         <h5>#berunner</h5>
+                         <p>43</p>
+                       </div>
+                   </div>
+              </div>
+              <div id="ins" class="col m9 cont-datos">
+                <h4>Crecimiento</h4>
+                    <div class="row">
+                      <div class="col m6 cont-variables">
+                        <h5>Total seguidores</h5>
+                        <p>978</p>
+                      </div>
+                      <div class="col m6 cont-variables">
+                        <h5>Total seguidos</h5>
+                        <p>271</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col m6 cont-variables">
+                        <h5>Total post</h5>
+                        <p>342</p>
+                      </div>
+                      <div class="col m6 cont-variables">
+                        <h5>Filtro más usado</h5>
+                        <p>Ratio</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col m4 cont-variables">
+                        <h5>Tags más usados</h5>
+                        <p>#maratónmedellín</p>
+                      </div>
+                      <div class="col m4 cont-variables">
+                        <h5>Likes</h5>
+                        <p>374</p>
+                      </div>
+                      <div class="col m4 cont-variables">
+                        <h5>Comentarios</h5>
+                        <p>20</p>
+                      </div>
+                    </div>
+                <h4>Usuarios Principales</h4>
+                        <div class="row">
+                            <div class="col m3 cont-variables">
+                              <h5>@pulis</h5>
+                              <p>(24 Likes)</p>
+                            </div>
+                            <div class="col m3 cont-variables">
+                              <h5>@jhonfredygalvez</h5>
+                              <p>(24 Likes)</p>
+                            </div>
+                            <div class="col m3 cont-variables">
+                              <h5>@dorian85_</h5>
+                              <p>(14 Likes)</p>
+                            </div>
+                            <div class="col m3 cont-variables">
+                              <h5>@ggualdron</h5>
+                              <p>(20 Likes)</p>
+                            </div>
+                        </div>
+                 <h4>Interacción</h4>
+                        <div class="row">
+                            <div class="col m12 cont-variables">
+                              <img src="./assets/img/interaccion-ins.png"  />
+                            </div>
+                        </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 l3 center-align">
+            <a class='btn btn-contact' href='http://eversocial.co/contact/' target="_blank">Contáctanos</a>
+          </div>
+          <div class="col s12 l3 push-l1 center-align">
+            <img src="./assets/img/logo-eversocial-blanco.png"/>
+          </div>
+          <div class="col s12 l3 push-l2 center-align">
+            Evermetrics 2016
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+    var generoData = [
+            {
+              value: 53,
+              color:"#ed1651",
+              highlight: "rgba(237, 22, 81, 0.8)",
+              label: "Mujeres"},
+            {
+              value: 45,
+              color: "#c62241",
+              highlight: "rgba(198, 34, 65, 0.8)",
+              label: "Hombres"
+            }
+          ];
+    var edadData = [
+            {
+              value: 41.90,
+              color:"#ed1651",
+              highlight: "rgba(237, 22, 81, 0.8)",
+              label: "25 - 34 Años"},
+            {
+              value: 32.38,
+              color: "#c62241",
+              highlight: "rgba(198, 34, 65, 0.8)",
+              label: "18 - 24 Años"
+            },
+            {
+              value: 9.20,
+              color: "#ee6e73",
+              highlight: "rgba(238, 110, 115, 0.8)",
+              label: "13 - 17 Años"
+            }
+          ];
+     var idiomaData = [
+            {
+              value: 82.53,
+              color:"#ed1651",
+              highlight: "rgba(237, 22, 81, 0.8)",
+              label: "Español"},
+            {
+              value: 16.19,
+              color: "#c62241",
+              highlight: "rgba(198, 34, 65, 0.8)",
+              label: "Inglés"
+            }
+          ];
+     var paisData = [
+            {
+              value: 92.38,
+              color:"#ed1651",
+              highlight: "rgba(237, 22, 81, 0.8)",
+              label: "Colombia"},
+            {
+              value: 1.58,
+              color: "#c62241",
+              highlight: "rgba(198, 34, 65, 0.8)",
+              label: "EEUU"
+            }
+          ];
+      var ciudadesData = [
+            {
+              value: 63.80,
+              color:"#ed1651",
+              highlight: "rgba(237, 22, 81, 0.8)",
+              label: "Medellín"},
+            {
+              value: 7.93,
+              color: "#c62241",
+              highlight: "rgba(198, 34, 65, 0.8)",
+              label: "Bogotá"
+            },
+            {
+              value: 1.58,
+              color: "#ee6e73",
+              highlight: "rgba(238, 110, 115, 0.8)",
+              label: "Pasto"
+            }
+          ];
+    var ctx = document.getElementById("genero").getContext("2d");
+    var ctx2 = document.getElementById("edad").getContext("2d");
+    var ctx3 = document.getElementById("idioma").getContext("2d");
+    var ctx4 = document.getElementById("pais").getContext("2d");
+    var ctx5 = document.getElementById("ciudades").getContext("2d");
+    window.myPie = new Chart(ctx).Pie(generoData);
+    window.myPie = new Chart(ctx2).Pie(edadData);
+    window.myPie = new Chart(ctx3).Pie(idiomaData);
+    window.myPie = new Chart(ctx4).Pie(paisData);
+    window.myPie = new Chart(ctx5).Pie(ciudadesData);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+  </body>
+</html>
